@@ -23,7 +23,11 @@ download "Python-3.7.2.tar.xz" at [https://www.python.org/downloads/](https://ww
 
 #### install Anaconda
 download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distribution/
+![
+](https://lh3.googleusercontent.com/1kuoUZg4YUMQ1Da8jG4DelSpeE0udbP-ZWjeAK7bC6saLP0qZzYPXfywi3lY0SJep5V4kCqb1FI "download_anaconda")
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDU1OTcyNzcsLTE2ODUyMzExMDAsLT
+eyJoaXN0b3J5IjpbLTIwMjU0MTUyMzQsLTE2ODUyMzExMDAsLT
 E3MDMzNDMwNDNdfQ==
 -->
