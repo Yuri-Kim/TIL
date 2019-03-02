@@ -53,28 +53,24 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
 
 새로 생성한 환경 활성화
 
-    $source activate ghks
+    $source activate 환경이름
 
-$ source activate pylesson
+### Install Pytorch
 
-**​파이토치 설치**
+    $conda install pytorch torchvision -c pytorch
 
-​$ conda install pytorch torchvision -c pytorch
 
 관련 라이브러리 설치
 
-$ conda install jupyter # 개발 환경 기능 제공
-
-$ conda install pillow # 이미지 처리 함수 제공
-
-$ conda install matplotlib # 그래프 작성용 함수 제공
-
-$ conda install pandas # 데이터 다루는 함수 제공
-
+    $conda install jupyter # 개발 환경 기능 제공
+    $conda install pillow # 이미지 처리 함수 제공
+    $conda install matplotlib # 그래프 작성용 함수 제공
+    $conda install pandas # 데이터 다루는 함수 제공
+    
 $ conda install scikit-learn # 머신러닝 관련 함수 제공
 
 $ pip install konlpy # 자연어 처리 함수 제공
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5ODQxNTUyNiwtMTY4NTIzMTEwMCwtMT
+eyJoaXN0b3J5IjpbLTU4NDMzMTIzMCwtMTY4NTIzMTEwMCwtMT
 cwMzM0MzA0M119
 -->
