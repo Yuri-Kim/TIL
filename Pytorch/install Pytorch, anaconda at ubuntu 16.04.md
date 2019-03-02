@@ -43,10 +43,10 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
     $export PATH=/root/anaconda3/bin:$PATH
     $source ~/.bashrc
 
-### ​파이썬 환경 설치
+### ​Python 환경 설치
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODgwODY4NiwtMTY4NTIzMTEwMCwtMT
-cwMzM0MzA0M119
+eyJoaXN0b3J5IjpbLTE0NDY0Njk1NzIsLTE2ODUyMzExMDAsLT
+E3MDMzNDMwNDNdfQ==
 -->
