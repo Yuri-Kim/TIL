@@ -62,15 +62,14 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
 
 관련 라이브러리 설치
 
-    $conda install jupyter # 개발 환경 기능 제공
-    $conda install pillow # 이미지 처리 함수 제공
-    $conda install matplotlib # 그래프 작성용 함수 제공
-    $conda install pandas # 데이터 다루는 함수 제공
-    
-$ conda install scikit-learn # 머신러닝 관련 함수 제공
-
-$ pip install konlpy # 자연어 처리 함수 제공
+    $conda install jupyter # 개발 환경 기능
+    $conda install pillow # 이미지 처리 함수
+    $conda install matplotlib # 그래프 작성용 함수
+    $conda install pandas # 데이터 다루는 함수
+    $conda install scikit-learn # 머신러닝 관련 함수
+    $pip install konlpy # 자연어 처리 함수
+   
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NDMzMTIzMCwtMTY4NTIzMTEwMCwtMT
+eyJoaXN0b3J5IjpbLTYzOTg1NzU2NiwtMTY4NTIzMTEwMCwtMT
 cwMzM0MzA0M119
 -->
