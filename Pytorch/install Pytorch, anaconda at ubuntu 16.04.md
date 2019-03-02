@@ -14,14 +14,20 @@ download "Python-3.7.2.tar.xz" at [https://www.python.org/downloads/](https://ww
     $sudo make
     $​sudo make install
 
-ZipImpotError 발생시,
+ZipImpotError 발생시
 ![
 ](https://lh3.googleusercontent.com/wbjcaEZGhjBxmHc4_jpR2yjsDMFn5ug6J6MNxfholc0I9fUXmVZMDB4rzeDHEZ_u2Xq0MMu8xbs "ZipImportError")
 
     $sudo apt-get install zlib1g-dev
-    $sudo make install
 
-아래와 같은 에러 발생시
+No module named 'ctypes' 에러 발생시
+![
+](https://lh3.googleusercontent.com/TXBIDcm2i_5YSDpX7LyRl8g1cjyHHlC2nLQXEvlbPIxjo0MswYmM816WJIPsTzzbZNw06yV58Fw "ModuleNotFoundError")
+
+    $sudo apt-get install libffi-dev
+
+위의 오류 모두 해결 후 다시
+
 
 #### install Anaconda
 download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distribution/
@@ -30,6 +36,6 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MjEzNTY4OSwtMTY4NTIzMTEwMCwtMT
+eyJoaXN0b3J5IjpbLTgyNzgxNDI3NSwtMTY4NTIzMTEwMCwtMT
 cwMzM0MzA0M119
 -->
