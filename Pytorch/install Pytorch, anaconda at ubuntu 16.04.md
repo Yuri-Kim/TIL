@@ -14,7 +14,10 @@ download Python-3.7.2.tar.xz at [https://www.python.org/downloads/](https://www.
     $sudo make
     $​sudo make install
 
+만약 아래와 같은 오류가 난다면,
+![
+](https://lh3.googleusercontent.com/wbjcaEZGhjBxmHc4_jpR2yjsDMFn5ug6J6MNxfholc0I9fUXmVZMDB4rzeDHEZ_u2Xq0MMu8xbs "ZipImportError")
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDMzNDMwNDNdfQ==
+eyJoaXN0b3J5IjpbMTI5NjY3ODQ1MSwtMTcwMzM0MzA0M119
 -->
