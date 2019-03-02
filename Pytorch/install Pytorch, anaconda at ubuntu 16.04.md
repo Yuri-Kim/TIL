@@ -37,9 +37,16 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
 ](https://lh3.googleusercontent.com/1kuoUZg4YUMQ1Da8jG4DelSpeE0udbP-ZWjeAK7bC6saLP0qZzYPXfywi3lY0SJep5V4kCqb1FI "download_anaconda")
 
     $bash /다운로드 경로/Anaconda3-2018.12-Linux-x86_64.sh
+![
+](https://lh3.googleusercontent.com/IiB6GVCRHOq1NUCn4Vu-ZPsoBs8COtdwQCvWO-n_iczIj8nut3GEkI-8Y9Rw2FnBMBdgSmQOxCs "installanaconda")
+
+    $export PATH=/root/anaconda3/bin:$PATH
+    $source ~/.bashrc
+
+### ​파이썬 환경 설치
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA0NDE1MzAyLC0xNjg1MjMxMTAwLC0xNz
-AzMzQzMDQzXX0=
+eyJoaXN0b3J5IjpbLTczODgwODY4NiwtMTY4NTIzMTEwMCwtMT
+cwMzM0MzA0M119
 -->
