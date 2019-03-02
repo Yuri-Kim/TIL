@@ -5,7 +5,7 @@ ubuntu16.04에 기본적으로 설치되어 있는 python version
 ](https://lh3.googleusercontent.com/D-Ep4i_UMM3cOrm_KVmeyIMkzT_tJ_0V9e8BrZpIgTwftJ19KN32x7_eOa2yBWX_WDmb0OCfTu8 "python_version")
 
 #### install python3.7 at ubuntu 16.04
-download Python-3.7.2.tar.xz at [https://www.python.org/downloads/](https://www.python.org/downloads/)
+download "Python-3.7.2.tar.xz" at [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
     $cd /다운로드 받은 폴더 경로/
     $tar -xvf Python-3.7.2.tar.xz
@@ -24,6 +24,6 @@ download Python-3.7.2.tar.xz at [https://www.python.org/downloads/](https://www.
 #### install Anaconda
 download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distribution/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMDEyMTM3MywtMTY4NTIzMTEwMCwtMT
-cwMzM0MzA0M119
+eyJoaXN0b3J5IjpbLTE2MDU1OTcyNzcsLTE2ODUyMzExMDAsLT
+E3MDMzNDMwNDNdfQ==
 -->
