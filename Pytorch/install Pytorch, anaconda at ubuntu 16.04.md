@@ -4,7 +4,7 @@ ubuntu16.04에 기본적으로 설치되어 있는 python version
 ![
 ](https://lh3.googleusercontent.com/D-Ep4i_UMM3cOrm_KVmeyIMkzT_tJ_0V9e8BrZpIgTwftJ19KN32x7_eOa2yBWX_WDmb0OCfTu8 "python_version")
 
-#### install python3.7 at ubuntu 16.04
+### install python3.7 at ubuntu 16.04
 download "Python-3.7.2.tar.xz" at [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
     $cd /다운로드 받은 폴더 경로/
@@ -28,16 +28,16 @@ No module named 'ctypes' 에러 발생시
 
 위의 오류 모두 해결 후 다시
 
-    $​sudo make install
+    $​sudo make install  
 
 
-#### install Anaconda
+### install Anaconda
 download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distribution/
 ![
 ](https://lh3.googleusercontent.com/1kuoUZg4YUMQ1Da8jG4DelSpeE0udbP-ZWjeAK7bC6saLP0qZzYPXfywi3lY0SJep5V4kCqb1FI "download_anaconda")
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzA3MTEwLC0xNjg1MjMxMTAwLC0xNz
-AzMzQzMDQzXX0=
+eyJoaXN0b3J5IjpbLTE3ODM0ODk1MzgsLTE2ODUyMzExMDAsLT
+E3MDMzNDMwNDNdfQ==
 -->
