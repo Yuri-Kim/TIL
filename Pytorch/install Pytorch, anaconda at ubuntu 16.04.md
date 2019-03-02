@@ -28,6 +28,8 @@ No module named 'ctypes' 에러 발생시
 
 위의 오류 모두 해결 후 다시
 
+    $​sudo make install
+
 
 #### install Anaconda
 download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distribution/
@@ -36,6 +38,6 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNzgxNDI3NSwtMTY4NTIzMTEwMCwtMT
-cwMzM0MzA0M119
+eyJoaXN0b3J5IjpbMTExMzA3MTEwLC0xNjg1MjMxMTAwLC0xNz
+AzMzQzMDQzXX0=
 -->
