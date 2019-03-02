@@ -21,8 +21,9 @@ download Python-3.7.2.tar.xz at [https://www.python.org/downloads/](https://www.
     $sudo apt-get install zlib1g-dev
     $sudo make install
 
+#### install Anaconda
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODUyMzExMDAsLTE3MDMzNDMwNDNdfQ
-==
+eyJoaXN0b3J5IjpbMTU4ODU0Nzk1MCwtMTY4NTIzMTEwMCwtMT
+cwMzM0MzA0M119
 -->
