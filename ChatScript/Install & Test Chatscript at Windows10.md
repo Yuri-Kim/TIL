@@ -44,15 +44,15 @@ Window 내장 콘솔은 UTF-8의 지원이 불안정해 문자열을 처리하�
 (문제가 생긴다면 C:Windows\ php.ini 폴더로 복사)  
 
 **php.ini 파일 수정**  
- 원본 | 수정본 
---|--|
-| ; extension_dir = “ext” | extension_dir = “.\ext” |
-| ; log_errors = On | log_errors = On |
-| 추가 | Error_log=”C:\inetpub\temp\php-errors.log” |
-| ;cgi.force_redirect = 1 | cgi.force_redirect = 0 |
-| 추가 | cgi_fix_pathinfo = 1 |
-| ;fastcgi.impersonate = 1 | fastcgi.impersonate = 1 |
-| ;fastcgi.logging = 0 | fastcgi.loggin = 0 |
+원본 | 수정본
+---|---
+; extension_dir = “ext” | extension_dir = “.\ext”   
+; log_errors = On | log_errors = On
+추가 | Error_log=”C:\inetpub\temp\php-errors.log”
+;cgi.force_redirect = 1 | cgi.force_redirect = 0
+추가 | cgi_fix_pathinfo = 1
+;fastcgi.impersonate = 1 | fastcgi.impersonate = 1
+;fastcgi.logging = 0 | fastcgi.loggin = 0
 
 
 **IIS에서 PHP를 처리 할 수 있게 변경**  
@@ -111,5 +111,5 @@ ConEmu.exe 파일 다운로드 후 실행 [https://conemu.github.io/en/Downloads
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNjIzMjk4XX0=
+eyJoaXN0b3J5IjpbMTgwMzYwMzIwNF19
 -->
