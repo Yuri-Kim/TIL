@@ -1,7 +1,7 @@
 ## Install & Test Chatscript at Windows10
 
 Index  
-> chatscript
+> chatscript  
 > IIS & PHP
 > Console에서 테스트하기
 > Web에서 테스트하기
@@ -113,5 +113,6 @@ ConEmu.exe 파일 다운로드 후 실행 [https://conemu.github.io/en/Downloads
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMzkxOTcxMiwxODAzNjAzMjA0XX0=
+eyJoaXN0b3J5IjpbLTE4Mjk4NDcwNzIsMTczMzkxOTcxMiwxOD
+AzNjAzMjA0XX0=
 -->
