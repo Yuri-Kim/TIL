@@ -2,9 +2,9 @@
 
 Index  
 > chatscript  
-> IIS & PHP
-> Console에서 테스트하기
-> Web에서 테스트하기
+> IIS & PHP  
+> Console에서 테스트하기  
+> Web에서 테스트하기  
 
 ## Chatscript  
 ChatScript-0.0.zip 다운로드 (0.0은 버전 번호) [https://sourceforge.net/projects/chatscript/files/](https://sourceforge.net/projects/chatscript/files/)   
@@ -113,6 +113,6 @@ ConEmu.exe 파일 다운로드 후 실행 [https://conemu.github.io/en/Downloads
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjk4NDcwNzIsMTczMzkxOTcxMiwxOD
+eyJoaXN0b3J5IjpbLTEzODQ5MzI1NzYsMTczMzkxOTcxMiwxOD
 AzNjAzMjA0XX0=
 -->
