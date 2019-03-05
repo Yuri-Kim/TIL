@@ -1,4 +1,14 @@
+
 ## Install Pytorch ubuntu 16.04
+
+> python 버전 확인  
+> install python3.7 at ubuntu 16,04  
+> install Anaconda  
+> Anaconda 명령어 (가상환경 생성)  
+>  install Pytorch  
+
+
+### python 버전 확인
 
 ubuntu16.04에 기본적으로 설치되어 있는 python version  
 ![
@@ -43,17 +53,44 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
     $export PATH=/root/anaconda3/bin:$PATH
     $source ~/.bashrc
 
-### ​Python 환경 설치
-새로운 환경 생성
-`$ conda create -n pylesson(원하는 환경이름)`​
+#### ​Anaconda 명령어 (가상환경 생성)  
+새로운 가상 환경 생성  
+
+    # 기본 명령어  
+    $conda create -n name(원하는 환경이름)  ​  
+    # python 버전 지정  
+    $conda create -n name python=3.7 anaconda   
+    
 
 아래 화면 나오면 y  
 ![
 ](https://lh3.googleusercontent.com/Hdv-wH7KxNf-49xQmOs-eniTJX6koKBNhVwSEqVcS1YU1B8AMXaotOqerK7TY0RCJcywHo9jLRQ "create")
 
-새로 생성한 환경 활성화  
+가상환경 활성화  
 
-    $source activate 환경이름
+    $source activate 가상환경이름
+
+가상환경 비활성화  
+
+    $deactivate  
+
+가상환경 목록 확인  
+
+    $conda info --envs  
+
+가상환경 삭제  
+
+    $conda remove -n 가상환경이름 --all  
+(--all :가상환경에 설치했던 패키지까지 모두 삭제)  
+
+가상환경 복제  
+
+    $conda create --name "원본 가상환경 이름" --clone "새로운 가상환경 이름"  
+
+이미 생성한 가상환경에 추가로 패키지 설치  
+
+    $conda install -n "가상환경 이름" numpy  
+
 
 ### Install Pytorch
 
@@ -70,6 +107,6 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
     $pip install konlpy # 자연어 처리 함수
    
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMDUzNDMwNiwtNjM5ODU3NTY2LC0xNj
-g1MjMxMTAwLC0xNzAzMzQzMDQzXX0=
+eyJoaXN0b3J5IjpbLTQ3MzQ2MDYxMCwxNzIwNTM0MzA2LC02Mz
+k4NTc1NjYsLTE2ODUyMzExMDAsLTE3MDMzNDMwNDNdfQ==
 -->
