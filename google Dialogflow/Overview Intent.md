@@ -33,7 +33,7 @@ Api.ai + Google의 머신러닝 엔진 → API.ai의 편리함 + Google machine 
 
 **Intent matching**  
 
-Dialogflow는 사용자가 발화할 때마다 특정 intent와 발화를 일치시키려고 시도하고 해당 intent내에서 응답 반환. 이 때 인식되지 않는 사용자 발화를 위해 fallback intent를 생성할 수 있음.  
+Dialogflow는 사용자가 발화할 때마다 특정 intent와 발화를 일치시키려고 시도하고 해당 intent내에서 응답 반환. 이 때 인식되지 않는 사용자 발화를 위해 fallback intent를 생성할 수 있음.
 
 Dialogflow는 개발자가 정의한 학습 문장, 중요 단어, 문장, 값 등을 이용해 intent와 매칭.  
 
@@ -44,5 +44,5 @@ Dialogflow는 개발자가 정의한 학습 문장, 중요 단어, 문장, 값 �
 출처 : https://dialogflow.com/docs/intents  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY2MTM0MjUyXX0=
+eyJoaXN0b3J5IjpbLTEzMjg4MzM0OTIsOTY2MTM0MjUyXX0=
 -->
