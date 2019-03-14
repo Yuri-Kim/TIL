@@ -44,6 +44,12 @@ Linux, OsX
 
     conda install tensorflow==1.12.0  
 
+
+matplotlib 설치  
+
+    conda install matplotlib  
+
+
 ### 구동 확인  
 
     $python
@@ -52,5 +58,5 @@ Linux, OsX
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMzU3NDEyOV19
+eyJoaXN0b3J5IjpbLTE5OTIwMzg5NTMsMTkzMzU3NDEyOV19
 -->
