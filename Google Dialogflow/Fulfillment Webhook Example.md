@@ -82,7 +82,8 @@ https://ngrok.com/ 에서 .zip 다운로드
 압축 풀고 cmd에서 ngrok.exe 있는 폴더로 이동
 
     ngrok http portnumber  
-ngrok http 5000 (for flask app)
+ngrok http 5000 (for flask app)  
+
 ![
 ](https://lh3.googleusercontent.com/wyf7gR-snqaHOpQU0CzscAl2Rw2Jkwa9jG_UfQ29IhtDazm8-DI8CJgXXSDrOCQHMVxL0iTglWxb "ngrok2")  
 
@@ -98,5 +99,5 @@ ngrok http 5000 (for flask app)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgxMjA0OTVdfQ==
+eyJoaXN0b3J5IjpbLTE1MjUzNTMwMjNdfQ==
 -->
