@@ -3,9 +3,9 @@
 
 ### Topic, Concept  
  - Topic : 사용자의 의도파악과 연관된 룰을 모아 놓은 논리적 묶음  
- -- Story topic  
- -- reactor topic  
- -- quibble  
+	 - Story topic  
+	 - reactor topic  
+	 - quibble  
  - Concept : 동의어나 유사 개념, 관련 요소의 모음  
  - canonical form : 동사, 형용사의 원형 ↔ original input(사용자 입력형)  
 
@@ -118,5 +118,6 @@ reuse함수와 outputmacro 비교
 인수의 개수는 상관없으며 첫번째 인수로 "AUTOSPACE"를 지정하면 단어들을 합할 때 각 단어와 단어 사이에 빈칸을 하나씩 넣어준다  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNTg2NjYyNCwtOTE3MDc1OTM3XX0=
+eyJoaXN0b3J5IjpbNzEzNjE5MzUxLC03MDU4NjY2MjQsLTkxNz
+A3NTkzN119
 -->
