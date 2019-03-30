@@ -3,7 +3,7 @@
 Sublime Text 3에서 anaconda로 생성한 virtualenv 사용하기  
 
 **macOS**    
-cmd + shift + p  
+cmd + shift + p   
 install package 선택  
 ![
 ](https://lh3.googleusercontent.com/zgFtPmreaQdoPwX9Owd1jfRmW7TZADKMp1UoCr7LKeZXgSZilf4VQ0AleJeEgM-9X4VUs51Q8_Q7 "install1")  
@@ -21,5 +21,6 @@ virtualenv 설치
  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MTg4NzI5Myw3NzEzOTk2NTddfQ==
+eyJoaXN0b3J5IjpbLTEyNTkxMDU1NjEsMTA5MTg4NzI5Myw3Nz
+EzOTk2NTddfQ==
 -->
