@@ -13,7 +13,7 @@ ChatScript-0.0.zip 다운로드 (0.0은 버전 번호) [https://sourceforge.net/
 
 다운로드 받은 파일의 압축을 풀기. 이 때 위치는 일반적으로 “C:\Users\컴퓨터이름\Documents”  
 
-ChatScript 개발을 위해서는 문서편집기 필요. 메모장, Notepad++등 편한 것을 사용.  
+ChatScript 개발을 위해서는 문서편집기 필요. 메모장, Notepad++등 편한 것을 사용.  (update : 190402 _ Chatscript IDE [링크](https://github.com/Yuri-Kim/TIL/blob/master/ChatScript/Chatscript%20IDE.md))  
 
 Window 내장 콘솔은 UTF-8의 지원이 불안정해 문자열을 처리하는 과정에서 에러를 반복적으로 발생시키기 때문에 룰 매칭이 안되었을 때 스크립트 문제인지 콘솔이 문자처리를 잘못한 것인지 알 수 없음. 따라서 다른 콘솔을 다운받아 사용하는 것을 추천.  
 (ex. ConEmu :  ConEmu 설치법은 아래에 추가로 정리)  
@@ -113,6 +113,6 @@ ConEmu.exe 파일 다운로드 후 실행 [https://conemu.github.io/en/Downloads
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODQ5MzI1NzYsMTczMzkxOTcxMiwxOD
-AzNjAzMjA0XX0=
+eyJoaXN0b3J5IjpbMTg3MTIxNjM4OCwtMTM4NDkzMjU3NiwxNz
+MzOTE5NzEyLDE4MDM2MDMyMDRdfQ==
 -->
