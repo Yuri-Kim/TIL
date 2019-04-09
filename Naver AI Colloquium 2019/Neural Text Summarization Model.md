@@ -38,7 +38,9 @@ Presenter : 전동현(NAVER)
 ![
 ](https://lh3.googleusercontent.com/4M63I4Kh6svVJZtvfzxtf8snLyWd-sHNf6V44zG11baYwO1__0nvliFIxWQuTyQM9SrGCggMH14Z "NTSM2")  
 
-$P_{final}(w) = p_{gen}P_{vecab}(w)+(1-p_{gen})\Sigma_{i:w_{i}=w}a^t_{i}$  
+$$
+P_{final}(w) = p_{gen}P_{vecab}(w)+(1-p_{gen})\Sigma_{i:w_{i}=w}a^t_{i}
+$$ 
 
 생성 부분  
 $p_{gen}P_{vecab}(w)$  
@@ -89,5 +91,6 @@ $covloss_t=\Sigma_imin(a^t_i,c^t_i)$
 - 부정확한 정보 생성 보완  
 	- Article → Content Selector (Include / Not include) → Word-level extractioin → PG based Summarizer → Summery  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgwOTgwNjMyLC02NzU4MjI2NjBdfQ==
+eyJoaXN0b3J5IjpbLTg5NDI3NjQ1NCwyODA5ODA2MzIsLTY3NT
+gyMjY2MF19
 -->
