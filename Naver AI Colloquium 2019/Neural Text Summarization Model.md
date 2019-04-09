@@ -38,20 +38,23 @@ Presenter : 전동현(NAVER)
 ![
 ](https://lh3.googleusercontent.com/4M63I4Kh6svVJZtvfzxtf8snLyWd-sHNf6V44zG11baYwO1__0nvliFIxWQuTyQM9SrGCggMH14Z "NTSM2")  
 
-$$
-P_{final}(w) = p_{gen}P_{vecab}(w)+(1-p_{gen})\Sigma_{i:w_{i}=w}a^t_{i}
-$$ 
+![
+](https://lh3.googleusercontent.com/2nH7rBScZuMgFBJg6LvYpqD-e4qk1exiiZhyU7r1h929eqEHKUHjlcfOZu4ueVx7jVQVZNQ7wlKu "latex1")  
 
 생성 부분  
-$p_{gen}P_{vecab}(w)$  
+![
+](https://lh3.googleusercontent.com/bBlm93UuviE7LCycEUIWpeaNY5LXF0HGTo8zWMr-sbepcXUzDyMwab2VSambFaCg7BGXRGIN3cpc "latex2")  
 추출 부분    
-$(1-p_{gen})\Sigma_{i:w_{i}=w}a^t_{i}$  
+![
+](https://lh3.googleusercontent.com/QlouaGgiEibx95s6nhF-7GpUpUJ8ap-bX8fGETdXWWW5MFB48fpZAO7-7PRDSUGusjZtXsA_B7W0 "latex3")  
   
 생성 확률  
-$p_{gen}=\sigma(w^T_hh^*_t+w^T_sS_t+w^T_xx_t+b_{ptr})$  
+![
+](https://lh3.googleusercontent.com/kZ3maEzDsqr1mMizhxkAG-YUpYqUwexd6qEEvBOYa9KfH453Bxbg3JrQqDw_j4rX2hT2L2y5iejB "latex4")  
 
 \+ Coverage penalty  
-$covloss_t=\Sigma_imin(a^t_i,c^t_i)$  
+![
+](https://lh3.googleusercontent.com/vBm6b-G0ss-B4FnwN1yuJRWHvLauiy-IfPPLHKKt_yfZ7vVNnwJJm9GatsOHVNpK1WTF0tBp6Twa "latex5")  
 
 - Pointer-generator Model의 문제점  
 	- Coverage loss로 줄이긴 했지만, 단어 반복 이슈  
@@ -89,8 +92,8 @@ $covloss_t=\Sigma_imin(a^t_i,c^t_i)$
 - ROUGE 점수가 믿을 만 한가?
 	- Human Evaluation 필요  
 - 부정확한 정보 생성 보완  
-	- Article → Content Selector (Include / Not include) → Word-level extractioin → PG based Summarizer → Summery  
+	- Article → Content Selector (Include / Not include) → Word-level extraction → PG based Summarizer → Summery  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NDI3NjQ1NCwyODA5ODA2MzIsLTY3NT
-gyMjY2MF19
+eyJoaXN0b3J5IjpbLTkzNjQ4MTgwLC04OTQyNzY0NTQsMjgwOT
+gwNjMyLC02NzU4MjI2NjBdfQ==
 -->
