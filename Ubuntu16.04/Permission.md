@@ -1,3 +1,4 @@
+
 ## Permission 관리  
 
 현재 위치의 디렉토리나 파일의 권한 보기  
@@ -10,7 +11,7 @@
 이런 문구가 해당 폴더나 파일의 권한을 나타냄  
 
 | d | r | w | x | - | w | - | r | - | x |  
-|--|--|--|--|--|--|--|--|--|--|--|    
+|--|--|--|--|--|--|--|--|--|--|    
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |    
 | -:파일, d:디렉토리 | 소유자 read | 소유자 write | 소유자 execute | 그룹 read | 그룹 write | 그룹 execute | 방문자 read | 방문자 write | 방문자 execute |  
 
@@ -52,5 +53,5 @@ name은 권한을 바꿀 파일이나 디렉토리 이름
  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNDA3NjI1XX0=
+eyJoaXN0b3J5IjpbLTg1ODUwOTk4NSwxNjI0MDc2MjVdfQ==
 -->
