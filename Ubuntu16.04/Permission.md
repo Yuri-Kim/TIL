@@ -1,7 +1,7 @@
 
 ## Permission 관리  
 
-현재 위치의 디렉토리나 파일의 권한 보기  
+현재 위치의 디렉토리나 파일 권한 보기  
 
     $ ls -al  
 
@@ -53,5 +53,6 @@ name은 권한을 바꿀 파일이나 디렉토리 이름
  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODUwOTk4NSwxNjI0MDc2MjVdfQ==
+eyJoaXN0b3J5IjpbODM3MTQ2MTc1LC04NTg1MDk5ODUsMTYyND
+A3NjI1XX0=
 -->
