@@ -7,7 +7,7 @@
 
 권한 부여  
 
-    # chmod +x ChatScript/BINARIES?LinuxChatScript64  
+    # chmod +x ChatScript/BINARIES/LinuxChatScript64  
 
 run CS engine in standalone mode  
 
@@ -18,5 +18,5 @@ run CS engine in standalone mode
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MzY0Mzc1Nl19
+eyJoaXN0b3J5IjpbMTM1NTM1MzE4MCwxMjYzNjQzNzU2XX0=
 -->
