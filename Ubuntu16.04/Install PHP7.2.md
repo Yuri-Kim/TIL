@@ -18,7 +18,7 @@ add the PHP repository from Onderj
 
 update your package list  
 
-    $ apt-get install php7.2  
+    $ sudo apt update    
 
 ### Install PHP 7.2  
 
@@ -38,5 +38,5 @@ check php version
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNzY0MzM1MV19
+eyJoaXN0b3J5IjpbMTk3OTQ4MzY0MiwtNDM3NjQzMzUxXX0=
 -->
