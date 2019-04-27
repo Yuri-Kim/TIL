@@ -1,6 +1,9 @@
 ## Compositional Word Vectors  
 
-Presenter : 오
+Presenter : 연선우 (KAIST)  
+
+### Overview  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MTE0NTMyOV19
+eyJoaXN0b3J5IjpbODk5NzgwNzc4XX0=
 -->
