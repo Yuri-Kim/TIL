@@ -1,3 +1,4 @@
+
 ## Install tensorflow-gpu (windows10)
 
 > 설치 환경  
@@ -26,11 +27,9 @@
 (설치할 때 화면이 깜빡일 수 있음)  
 
 환경 변수 설정  
+사용자 변수 - Path에 아래 내용 추가  
 
-    C:\> SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;%PATH%  
-	C:\> SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\extras\CUPTI\libx64;%PATH%  
-	C:\> SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include;%PATH%  
-    C:\> SET PATH=C:\tools\cuda\bin;%PATH%  
+    C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin   
 
 ### CuDNN 설치  
 [여기서](https://developer.nvidia.com/rdp/cudnn-download) 버전 맞춰 다운로드 후 압축 해제 (회원가입 필요)    
@@ -61,5 +60,5 @@ tensorflow-gpu (1.13.1) 설치
 ](https://lh3.googleusercontent.com/h6hNMlLXiu1diuILVFykk5kP4coOvpDXnRKRqvwus_0ATyIbCjelE35n0-6hSZtW4vNeUf0rB6EC "gpu")  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NDA3ODY4M119
+eyJoaXN0b3J5IjpbLTIwMTg2ODkxNDJdfQ==
 -->
