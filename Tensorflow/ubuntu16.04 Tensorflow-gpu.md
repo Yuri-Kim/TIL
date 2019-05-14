@@ -38,6 +38,11 @@ GCC
 설치 되지 않았다면,  
 
 ctrl + alt + f1 을 눌러서 콘솔모드로 이동
+
+python3.65
+cuda 8.0
+cudnn 6.0 
+tensorflow-gpu 1.3.0 으로 해보기
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMDg4OTUyNV19
+eyJoaXN0b3J5IjpbLTEwNjI5NjM4MzQsLTgzMDg4OTUyNV19
 -->
