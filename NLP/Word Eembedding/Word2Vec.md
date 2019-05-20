@@ -1,7 +1,5 @@
 ## Word2Vec  
 
-## Word2Vec  
-
 **Reference**  
 [ratsgo's blog](https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/03/30/word2vec/)  
 [Lil'Log](https://lilianweng.github.io/lil-log/2017/10/15/learning-word-embedding.html)  
@@ -10,5 +8,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTE4NTgzMDAsLTcxMjc0NzY2Ml19
+eyJoaXN0b3J5IjpbNTc0NzU4MTkyLC03MTI3NDc2NjJdfQ==
 -->
