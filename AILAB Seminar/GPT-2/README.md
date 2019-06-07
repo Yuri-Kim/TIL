@@ -6,7 +6,7 @@
 ---
 
 ### Reference  
-** 내가 정리한 내용**  
+**내가 정리한 내용**  
 [내 깃헙](https://github.com/Yuri-Kim/TIL/blob/master/Paper%20Review/Language%20Models%20are%20Unsupervised%20Multitask%20Learners.md)
 
 **Paper**  
@@ -16,7 +16,7 @@
 - [openai github](https://github.com/openai/gpt-2) 
 - [NL-025, Language Models are Unsupervised Multitask Learners](https://ai-information.blogspot.com/2019/02/language-models-are-unsupervised_21.html)  
 - [Too powerful NLP model (GPT-2)](https://towardsdatascience.com/too-powerful-nlp-model-generative-pre-training-2-4cc6afb6655)  
-- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDkwMzMwODIsNjU1MTkxODM1XX0=
+eyJoaXN0b3J5IjpbLTExMzA4MTE4MjcsLTEwMDkwMzMwODIsNj
+U1MTkxODM1XX0=
 -->
