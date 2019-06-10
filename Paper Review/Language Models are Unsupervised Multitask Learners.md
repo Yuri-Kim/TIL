@@ -35,7 +35,7 @@ Alec Radford, Jeffery Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever 
 ![
 ](https://lh3.googleusercontent.com/uV8vYBkLGNKAIs7IRxEVxKGQwk84cjUmOKhnQiNYn1IardL_j5RXHD5bp4ASqZfMu3WLC64vKVO_ "McCann")  
 - 이런게 가능하네? → openAI에서 시도  
-- McCann과의 차이점 : McCann은 multi-task learning으로 실제 여러 개의 데이터 세트를 가져와서 학습한것 / GPT2는 LM을 supervised-learning으로 한것  
+- McCann과의 차이점 : McCann은 multi-task learning으로 실제 여러 개의 데이터 세트를 가져와서 학습한것 / GPT2는 LM을 unsupervised-learning으로 한것  
 - 즉, GPT2는 fine-tunning의 과정이 없다고 볼 수 있으며, 어떤 task에도 적용 가능 → 실제로 학습 해 보면, Multi-task learning에 비해 매우 느림  
 - 결론적으로 충분한 capacity가 있으면 모델은 general system을 가질 수 있고 LM을 통해 unsupervised multi-task learning을 할 수 있음!  
 
@@ -149,5 +149,5 @@ long-term dependencies 측정을 위한 데이터 셋
 - 본 논문에서 제안한 GPT-2는 8개의 dataset 중 7개에서 SOTA   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDgyMTYxMjNdfQ==
+eyJoaXN0b3J5IjpbLTE3MTM5NDIzMDZdfQ==
 -->
