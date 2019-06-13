@@ -69,7 +69,7 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N
 ![
 ](https://lh3.googleusercontent.com/ZUvuc7STXrnSuXsY5VDAaR46KJlXAKy0Gwtcnc99EYNvNUDCVQDSOlezl8abnT3bHFTtmPOXOwIz "3")  
 - 본 논문의 attention을 Scaled Dot-Product Attention이라 함   
-- input은 dk dimentsion을 갖는 query, key들, dv dimentsion을 갖는 value들  
+- input은 dk dimension을 갖는 query, key들, dv dimension을 갖는 value들  
 - 이때 모든 query, key에 대해 dot-product 계산 후 각각을 √dk 로 나눠줌 (dot-product 후 √dk로 scaling을 해주기 때문에 Scaled Dot-Product Attention) 그 후 에 softmax를 적용해 value들에 대한 weight(어디에 attention 할 지)들을 얻어냄  
 	- key, value는 attention이 이루어지는 위치에 상관없이 같은 값 가짐  
 	- 이 때, query, key에 대해 dot-product를 계산하면 각각의 query, key 사이의 유사도를 구할 수 있음(ex. cosine similarity : dot-product/vector의 magnitude)   
@@ -132,6 +132,6 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NTQzMzk0MiwyMDUzNjQ0MTY4LC0xOD
-EyOTk0OTMxXX0=
+eyJoaXN0b3J5IjpbMTk1MTkyOTg0LC02NzU0MzM5NDIsMjA1Mz
+Y0NDE2OCwtMTgxMjk5NDkzMV19
 -->
