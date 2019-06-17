@@ -1,6 +1,6 @@
 ## Language Models are Unsupervised Multitask Learners  
 
-Alec Radford, Jeffery Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever (openAI, 2019)  [paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)  
+Alec Radford, Jeffery Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever (openAI, 2019)  [paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf), [blog](https://openai.com/blog/better-language-models/)    
 
 
 ### Abstract  
@@ -149,5 +149,5 @@ long-term dependencies 측정을 위한 데이터 셋
 - 본 논문에서 제안한 GPT-2는 8개의 dataset 중 7개에서 SOTA   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTM5NDIzMDZdfQ==
+eyJoaXN0b3J5IjpbMTMxMDg4OTAzNiwtMTcxMzk0MjMwNl19
 -->
