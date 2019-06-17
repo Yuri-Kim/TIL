@@ -7,7 +7,7 @@ Alec Radford, Jeffery Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever 
 - question-answering, machine translation, reading comprehension, summerization 같은 NLP Task는 보통 task-specific한 dataset을 이용하는 supervised learning이 일반적임  
 - WebText라는 (이 논문에서 만든 dataset) 수백만 dataset으로 학습할 때 어떤 라벨링이나 explict supervision없이 위 LM을 학습시키고 싶음  
 - LM의 능력은 zero-shot task에 필수적임.  
-- GPT-2는 1.5B parameter Transformer이고 LM dataset 8개 중 7개에서 SOTA (4개의 model을 제시했는데 각 모델의 차이는 parameter차이)  
+- **GPT-2**는 1.5B parameter Transformer이고 LM dataset 8개 중 7개에서 SOTA (4개의 model을 제시했는데 각 모델의 차이는 parameter차이)  
 
 ### Introduction  
 - 많은 데이터를 이용한 supervised learning은 데이터의 분포에 민감 ( 즉, 모델이 학습한 데이터가 아닌 새로운 데이터에 대해서는 잘 작동하지 않을 수 있음(narrow expert)) → 그래서 저자는 새로운 dataset을 만들고 labeling하는 작업 없이 많은 task들에서 성능을 낼 소 수 있는 general system을 지향하고 싶음  
@@ -149,5 +149,6 @@ long-term dependencies 측정을 위한 데이터 셋
 - 본 논문에서 제안한 GPT-2는 8개의 dataset 중 7개에서 SOTA   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMDg4OTAzNiwtMTcxMzk0MjMwNl19
+eyJoaXN0b3J5IjpbLTEzNTQyNTU2NjgsLTE3MTM5NDIzMDZdfQ
+==
 -->
