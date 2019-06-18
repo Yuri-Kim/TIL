@@ -102,7 +102,8 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N
 - 각각의 과정에서 dimension 표현하면 위 그림과 같음  
 
 **3.2.3 Applications of Attention in our Model**  
-- 여기서 부터는 앞으로 정리 할거임! 
+- query는 이전 decoder layer에서, key, value는 encoder의 output  
+	- 
 
 #### 3.3 Position-wise Feed-Forward Networks  
 
@@ -132,6 +133,6 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MTkyOTg0LC02NzU0MzM5NDIsMjA1Mz
-Y0NDE2OCwtMTgxMjk5NDkzMV19
+eyJoaXN0b3J5IjpbMTU0ODE5MTA0NywxOTUxOTI5ODQsLTY3NT
+QzMzk0MiwyMDUzNjQ0MTY4LC0xODEyOTk0OTMxXX0=
 -->
