@@ -10,10 +10,27 @@
 - 기본적으로 일주일에 한 챕터를 나가는 것으로 하긴 하지만, 필수는 아님  
 - 공부 방법도 자유. 서로에게 검사받을 필요 없음
 
+### Index  
+(1) multilayer perceptron  
+(2) loss function, optimizers  
+(3) regularization  
+(4) auto encoder  
+(5) RNN  
+(6) LSTM  
+(7) word2vec  
+(8) seq2seq  
+(9) attention network  
+(10) CNN  
+(11) dropout  
+(12) batch-normalization  
+(13) cnn models  
+(14) GAN  
+(15) variational auto-encoder  
+
 #### References  
  - 모두를 위한 머신러닝/딥러닝 : https://github.com/hunkim/DeepLearningZeroToAll  
  - "밑바닥부터 시작하는 딥러닝", "텐서플로 첫걸음" 도서  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMTc0MDI1MywxNzQ1OTI0MDc3XX0=
+eyJoaXN0b3J5IjpbLTIwNDk2MDMwMjIsMTc0NTkyNDA3N119
 -->
