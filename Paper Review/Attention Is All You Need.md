@@ -131,8 +131,14 @@ Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N
 
 ### Conclusion  
 
+ttention Is All You Need (NIPS 2017), Vaswani et al. [paper](https://arxiv.org/abs/1706.03762)  
 
+
+---
+### References  
+- Attention Is All You Need (NIPS 2017), Vaswani et al. [paper](https://arxiv.org/abs/1706.03762)  
+- [PR-049: Attention is All You Need - 논문 리뷰 영상](https://www.youtube.com/watch?v=6zGgVIlStXs&list=PLlMkM4tgfjnJhhd4wn5aj8fVTYJwIpWkS&index=50)  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0ODE5MTA0NywxOTUxOTI5ODQsLTY3NT
-QzMzk0MiwyMDUzNjQ0MTY4LC0xODEyOTk0OTMxXX0=
+eyJoaXN0b3J5IjpbLTc0NjM1MjU4NSwxNTQ4MTkxMDQ3LDE5NT
+E5Mjk4NCwtNjc1NDMzOTQyLDIwNTM2NDQxNjhdfQ==
 -->
