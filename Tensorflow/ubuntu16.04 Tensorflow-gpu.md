@@ -82,9 +82,11 @@ GCC
     $ python3 -c "import tensorflow as tf; print(tf.__version__)"  
 
 
-
+### appendix  
+conda: 명령을 찾을 수 없습니다
+→ vi ~./bashrc 들어가서 PATH 추가
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4NTczMDQwLC0xMDYyOTYzODM0LC04Mz
-A4ODk1MjVdfQ==
+eyJoaXN0b3J5IjpbMjEzNzMwMjkwMCwtMTA2Mjk2MzgzNCwtOD
+MwODg5NTI1XX0=
 -->
