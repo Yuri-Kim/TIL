@@ -25,7 +25,7 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
 
 가상환경 활성화  
 
-    $source activate 가상환경이름
+    $conda activate 가상환경이름
 
 가상환경 비활성화  
 
@@ -51,5 +51,5 @@ download "Anaconda3-2018.12-Linux-x86_64.sh" at https://www.anaconda.com/distrib
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MzMyMTg0MF19
+eyJoaXN0b3J5IjpbLTE0MzYwOTQ3NzIsLTM5MzMyMTg0MF19
 -->
