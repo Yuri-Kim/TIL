@@ -2,20 +2,16 @@
 한양대학교 인공지능 연구실에서 진행하는 세미나  Season#8 (# Jul 15, 2019 - Aug 19, 2019) 발표 준비  
 
 ---
-### Language Models are Unsupervised Multitask Learners  
+### Improving Languate Understanding by Generative Pre-Training  
 ---
 
 ### Reference  
 **내가 정리한 내용**  
-[내 깃헙](https://github.com/Yuri-Kim/TIL/blob/master/Paper%20Review/Language%20Models%20are%20Unsupervised%20Multitask%20Learners.md)
+[내 깃헙](https://github.com/Yuri-Kim/TIL/blob/master/Paper%20Review/Improving%20Language%20Understanding%20by%20Generative%20Pre-Training.md)
 
 **Paper**  
-- Language Models are Unsupervised Multitask Learners, Alec Radford et al. [paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)  
+- Improving Languate Understanding by Generative Pre-Training, Alec Radford, Karthik Narasimhan, Tim Salimans Ilya Sutskever (2018, OpenAI) [paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf), [blog](https://openai.com/blog/language-unsupervised/)    
 
-**Other**  
-- [openai github](https://github.com/openai/gpt-2) 
-- [NL-025, Language Models are Unsupervised Multitask Learners](https://ai-information.blogspot.com/2019/02/language-models-are-unsupervised_21.html)  
-- [Too powerful NLP model (GPT-2)](https://towardsdatascience.com/too-powerful-nlp-model-generative-pre-training-2-4cc6afb6655)  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYyMjIzOTE0XX0=
+eyJoaXN0b3J5IjpbODgxNzcxNzE4XX0=
 -->
