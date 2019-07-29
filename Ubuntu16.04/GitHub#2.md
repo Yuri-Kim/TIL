@@ -37,7 +37,15 @@ master가 아닌 다른 branch로 push하고 싶다면 아래와 같이 브랜�
 
     $ git push origin {branch name}  
 
+특정파일/폴더 제외하고 push  
+(git rm --cache  명령어는 Staging Area에서 파일을 제거하고 working directory에서는 파일을 유지하는 명령어 / 명령어를 실행한 후 꼭  commit 해줘야 함)
+
+    // 파일 제외  
+    # git rm --cached 파일명  
+    // 디렉토리 제외  
+    # git rm --cached 폴더명\ -r  
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDM2NjE0MzNdfQ==
+eyJoaXN0b3J5IjpbMTg1NjY2NDEyMCwtMjE0MzY2MTQzM119
 -->
