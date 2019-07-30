@@ -45,7 +45,18 @@ master가 아닌 다른 branch로 push하고 싶다면 아래와 같이 브랜�
     // 디렉토리 제외  
     # git rm --cached 폴더명\ -r  
 
+여러 폴더/파일을 제외하고 싶다면, 
+
+    $ vi .gitignore  
+    // 커밋에서 제외할 폴더나 파일 입력  
+    .idea/  
+    // git commit 수행  
+    $ git commit -m 'ignore files'  
+      
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NjY2NDEyMCwtMjE0MzY2MTQzM119
+eyJoaXN0b3J5IjpbNTkxODg0OTY5LDE4NTY2NjQxMjAsLTIxND
+M2NjE0MzNdfQ==
 -->
