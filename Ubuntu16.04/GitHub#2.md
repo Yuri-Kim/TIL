@@ -37,6 +37,10 @@ master가 아닌 다른 branch로 push하고 싶다면 아래와 같이 브랜�
 
     $ git push origin {branch name}  
 
+push오류 날 때 임시방편(강제 push)  
+
+    $ git push -u origin +master  
+
 특정파일/폴더 제외하고 push  
 (git rm --cache  명령어는 Staging Area에서 파일을 제거하고 working directory에서는 파일을 유지하는 명령어 / 명령어를 실행한 후 꼭  commit 해줘야 함)
 
@@ -57,6 +61,6 @@ master가 아닌 다른 branch로 push하고 싶다면 아래와 같이 브랜�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxODg0OTY5LDE4NTY2NjQxMjAsLTIxND
-M2NjE0MzNdfQ==
+eyJoaXN0b3J5IjpbMTI1NTE5NTU2OSw1OTE4ODQ5NjksMTg1Nj
+Y2NDEyMCwtMjE0MzY2MTQzM119
 -->
