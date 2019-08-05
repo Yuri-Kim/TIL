@@ -37,9 +37,13 @@ master가 아닌 다른 branch로 push하고 싶다면 아래와 같이 브랜�
 
     $ git push origin {branch name}  
 
+----
+
 push오류 날 때 임시방편(강제 push)  
 
     $ git push -u origin +master  
+
+---
 
 특정파일/폴더 제외하고 push  
 (git rm --cache  명령어는 Staging Area에서 파일을 제거하고 working directory에서는 파일을 유지하는 명령어 / 명령어를 실행한 후 꼭  commit 해줘야 함)
@@ -57,10 +61,27 @@ push오류 날 때 임시방편(강제 push)
     // git commit 수행  
     $ git commit -m 'ignore files'  
       
+----
+아래와 같은 오류 메시지 발생 시    
+
+    To https://github.com/userId/userProject.git  
+    ! [rejected] master -> master (non-fast-forward)  
+    error: failed to push some refs to 'https://github.com/userId/userProject.git'  
+    hint: Updates were rejected because the tip of your current branch is behind  
+    hint: its remote counterpart. Integrate the remote changes (e.g.hint: 'git pull ...') before pushing again.  
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.  
+
+push 전에 pull 해줘야 하는데,
+
+    refusing to merge unrelated histories  
+이런 오류가 뜬다면  
+
+    git pull origin 브런치명 --allow-unrelated-histories  
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NTE5NTU2OSw1OTE4ODQ5NjksMTg1Nj
-Y2NDEyMCwtMjE0MzY2MTQzM119
+eyJoaXN0b3J5IjpbLTE5NTE2MDAyMjEsMTI1NTE5NTU2OSw1OT
+E4ODQ5NjksMTg1NjY2NDEyMCwtMjE0MzY2MTQzM119
 -->
