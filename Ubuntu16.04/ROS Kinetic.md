@@ -1,3 +1,4 @@
+
 ## ROS Kinetic  
 
 ### Installation  
@@ -29,6 +30,17 @@ ROS 사용하기 앞서, ROS를 돌리기 위한 설정 진행
     $ sudo rosdep init  
     $ rosdep update  
 
+위 과정에서 아래와 같은 오류가 난다면,  
+
+    ERROR: default sources list file already exists:  
+    /etc/ros/rosdep/sources.list.d/20-default.list  
+    Please delete if you wish to re-initialize  
+
+아래 명령어 입력 후 다시 진행  
+
+    $ sudo rm -r /etc/ros  
+    $ sudo rosdep init  
+
 환경설정  
 bashrc를 통해 shell을 켤 때 마다 자동으로 환경변수가 설정되도록 해줌  
 
@@ -44,7 +56,31 @@ rosinstall 설치
 
     $ sudo apt-get install python-rosinstall  
 
+ROS Workspace 생성  
+
+    $ mkdir -p ~/catkin_ws/src  
+    $ cd ~/catkin_ws/src  
+    $ catkin_init_workspace  
+
+(아무것도 없지만) build 해보기  
+
+    $ cd ~/catkin_ws/  
+    $ catkin_make  
+
+위 결과로 build, devel 폴더 생김  
+
+아래 명령 실행 후, 방금 전 setup으로 workspace가 overlay되게 하기 위해 환경변수 포함시켜 줌  
+
+    $ source devel/setup.bash  
+    $ echo $ROS_PACKAGE_PATH  /home/youruser/catkin_ws/src:/opt/ros/kinetic/share  
+
+---
+주의할점  
+- 똑같은 명령어로 설치해도 vertualenv같은 가상 머신에서는 의존성 깨지는 문제 발생... (아직 해결방법 못찾음)  
+  
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIwMjIwNjQyXX0=
+eyJoaXN0b3J5IjpbMjAxODc0NDgxMSw2MjAyMjA2NDJdfQ==
 -->
