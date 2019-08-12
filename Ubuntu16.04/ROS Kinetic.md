@@ -75,12 +75,88 @@ ROS Workspace 생성
     $ echo $ROS_PACKAGE_PATH  /home/youruser/catkin_ws/src:/opt/ros/kinetic/share  
 
 ---
+환경설정  
+bashrc를 편집기로 불러와서 몇가지 내용 추가  
+
+    $ vi ~/.bashrc  
+
+제일 하단에 아래 내용들 추가
+
+    # Load ROS Kinetic Setup source  
+    /opt/ros/kinetic/setup.bash  
+    source ~/catkin_ws/devel/setup.bash  
+    # Configure ROS Network export  
+    ROS_LOCALIP=xxx.xxx.xxx.xxx  
+    export ROS_MASTER_URI=http://${ROS_LOCALIP}:11311  
+
+ROS_LOCALIP에는 현재 자신의 IP 입력 (ifconfig 명령어를 통해 확인 가능)  
+
++alias 라는 명령을 통해, 단축 명령어를 만들 수 있음  
+( ex. 워크스페이스로 이동하는 것 / 빌드하는 것 )  
+이 내용도 bashrc에 추가해주면, 단축 명령어로써 쉘에서 사용 가능  
+
+    # Configure ROS alias command  
+    alias cw='cd ~/catkin_ws'  
+    alias cs='cd ~/catkin_ws/src'  
+    alias cm='cd ~/catkin_ws && catkin_make'  
+
+다 추가했으면, 저장 후에 바로 적용하기 위해 아래 명령어를 사용
+
+    $ source ~/.bashrc  
+
+---
+
+### Tutorial (beginner)  
+참고 문서 : [CreatingPackage](http://wiki.ros.org/ROS/Tutorials/CreatingPackage), [WritingPublisherSubscriber](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29)  
+
+Creating a catkin Package  
+(use the catkin_create_pkg script to create a new package called 'beginner_tutorials' which depends on std_msgs, roscpp, and rospy)  
+
+    # You should have created this in the Creating a Workspace Tutorial  
+    $ cd ~/catkin_ws/src  
+    $ catkin_create_pkg beginner_tutorials std_msgs rospy roscpp  
+
+Building a catkin workspace and sourcing the setup file  
+
+    $ cd ~/catkin_ws  
+    $ catkin_make  
+
+**Writing the Publisher Node**  
+
+change the directory  
+
+     $ roscd beginner_tutorials  
+
+create 'scripts' folder  
+
+    $ mkdir scripts  
+    $ cd scripts  
+
+작성하거나 다운로드 받은 python 파일 권한 설정  
+
+    $ chmod +x talker.py  
+
+building my nodes  
+
+    $ cd ~/catkin_ws  
+    $ catkin_make  
+
+콘솔에서  
+
+    $ roscore
+    $ rosrun beginner_tutorials talker.py  
+    $ rosrun beginner_tutorials listener.py  
+
+---
+
 주의할점  
 - 똑같은 명령어로 설치해도 vertualenv같은 가상 머신에서는 의존성 깨지는 문제 발생... (아직 해결방법 못찾음)  
   
-
+기타 참고 자료  
+- [ROS tutorial](http://wiki.ros.org/ROS/Tutorials#Beginner_Level)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxODc0NDgxMSw2MjAyMjA2NDJdfQ==
+eyJoaXN0b3J5IjpbMTg5MTQ5OTMzNywyMDE4NzQ0ODExLDYyMD
+IyMDY0Ml19
 -->
