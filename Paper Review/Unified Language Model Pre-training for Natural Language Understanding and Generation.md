@@ -2,6 +2,7 @@
 ## Unified Language Model Pre-training for Natural Language Understanding and Generation  
 
 Li Dong, Nan Yang, Wenhui Wang, Furu Wei et al. (Microsoft Research) [Paper](https://arxiv.org/abs/1905.03197)  
+Source code : [github](https://github.com/microsoft/unilm)  
 
 ### Abstract  
 - UNILM : Unified Pre-trained Language Model  
@@ -59,9 +60,11 @@ Li Dong, Nan Yang, Wenhui Wang, Furu Wei et al. (Microsoft Research) [Paper](htt
 -  input representation은 BERT를 따라감 (뭔지 다시 확인해서 정리)  
 	- 예를 들어서, "forecasted"  → "forecast", "##ed" (##는 하나의 단어에 포함됨을 나타냄)  
 - 각 input token의 vector representation은 corresponding token embedding + position embedding + segment embedding (sum)  
--  
+-  UNILM은 여러가지 LM task들을 사용하여 학습되기 때문에 segment embedding역시 
 
 **2. Backbone Network: Transformer**  
+
+![](https://lh3.googleusercontent.com/LbQyXgk9NoDbpPLzOhIUUTIrDU8kXsod-SSpLkPjNBMUxmrZHvbTP1nY4SDF2ZLAxAhs7jnxASL- "01")  
 
 **3. Pre-training Objectives**  
 
@@ -71,25 +74,44 @@ Li Dong, Nan Yang, Wenhui Wang, Furu Wei et al. (Microsoft Research) [Paper](htt
 
 ### Experiments  
 
-
+**1. Abstractive Summarization**
 ![enter image description here](https://lh3.googleusercontent.com/VH5BF1kRAOwAWC-4nN1wB-kbg1iznrVb8G694eJi6hngO8BFI_E3IAHW3ma_aZQmE2ptD08Zublk "14")  
 
+**2. Question Answering**  
 ![enter image description here](https://lh3.googleusercontent.com/1DVwRt7VM94FPElQNbyEdGjbJysuGyzLIDrLgLi2kDdDSU47x-QkybfJI2-DU96jjx599g4mjAsu "15")  
 
 ![](https://lh3.googleusercontent.com/atsTyOGHLcLmZJfk3vbKGl4_2C6eYWf-F06WNTW1xwgBvmhD1ER_n_mnAB6G598PGYYIz5hUsmT2 "16")  
 
 ![](https://lh3.googleusercontent.com/64mT5qigUZZqa56_3OG8dFolpTbTyq92ZCYo2Inr11HPGz3nlAq0lC9LDc_DgVJfmLslGyNiUXAy "17")  
 
+**3. Question  Generation**  
 ![enter image description here](https://lh3.googleusercontent.com/4Xcju7mdOvJWKG76dSbVxo47-XQ97YtSNimHct_-gkArCasq9LsGuKoHIAmOjqBAFtDv1i16iOti "18")  
 
 ![](https://lh3.googleusercontent.com/evyUIAAvW3_BNdnwYI-tA8I4bO-AiZXHyYCB6-9LgQOlMpdGG9jZPB0AdcPi1mELFbLqhfShK-AM "19")    
 
+**4. GLUE Benchmark**  
 ![](https://lh3.googleusercontent.com/oZMiEeikhKEEqM2XSIazCl4PdbMksXSxMZHkb9fz8_S0QNZNPQn3475dorpb6xoOLHzXsMuDZrT_ "20")    
 
+**5. Long Text Generation : A Case Study**  
 
 ### Conclusion and Future Work  
+**Conclusion**  
+- parameter를 공유함으로써 여러가지 LM objectives에 대해 최적화 된 unified pre-training model을 제안함  
+- bidirectional, unidirectional, sequence-to-sequence LMs들의 통합으로 NLU, generation task에 대해 모두 사용가능한 pre-tranined 된 LM을 fine-tune할 수 있음  
+- GLUE벤치마크와 두가지 question answering dataset 실험 결과에서 UNILM이 BERT보다 우세하게 나타남  
+- 또한, unified pre-trained LM은 세가지 자연어 generation task들에서 (CNN/DailyMail abstractive summarization, SQuAD question generation, CoQA generative question answering) 기존 SOTA모델보다 좋은 성능을 나타냄  
 
+**Future Work**  
+앞으로 아래와 같이 작업을 진행할거임  
+- 더많은 epoch와 더 큰 모델을 webscale text corpus로 학습시켜서 현재 모델의 한계를 해결할 거임  
+- At the same time, we will also conduct more experiments on end applications as well as ablation experiments to investigate the model capability and the benefits of pre-training multiple LMs with the same network.  
+-  현재는 단일언어 NLP task에 중점을 두고 실험을 하고 있지만, 기계번역 같은 다중언어간 작업을 지원하기 위해 모델을 통합하는 것에 관심이 있음    
+- NLU와 NLG에 대해 multi-task fine-tuning를 수행 할 것임 (이는 Multi-Task Deep Neural Network (MT-DNN)의 확장)  
+ 
 ![enter image description here](https://lh3.googleusercontent.com/QqYOlVcPHO-NB2O3LVAIfsptzfbl5zq1bKmJWWotdxElh8ZjdM_5r--Zh3qJx58HGCS809XG1B3g "21")
+위 표는 UNILM left-to-right generation을 이용해 Text 생성한 예시  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1OTU4MzUzLC04ODk4NzI1MjVdfQ==
+eyJoaXN0b3J5IjpbMTM1NzYxNjEwOCwtNDU5NTgzNTMsLTg4OT
+g3MjUyNV19
 -->
