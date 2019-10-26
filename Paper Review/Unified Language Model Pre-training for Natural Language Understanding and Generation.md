@@ -3,6 +3,7 @@
 
 Li Dong, Nan Yang, Wenhui Wang, Furu Wei et al. (Microsoft Research) [Paper](https://arxiv.org/abs/1905.03197)  
 Source code : [github](https://github.com/microsoft/unilm)  
+33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada.  
 
 ### Abstract  
 - UNILM : Unified Pre-trained Language Model  
@@ -60,39 +61,60 @@ Source code : [github](https://github.com/microsoft/unilm)
 -  input representation은 BERT를 따라감 (뭔지 다시 확인해서 정리)  
 	- 예를 들어서, "forecasted"  → "forecast", "##ed" (##는 하나의 단어에 포함됨을 나타냄)  
 - 각 input token의 vector representation은 corresponding token embedding + position embedding + segment embedding (sum)  
--  UNILM은 여러가지 LM task들을 사용하여 학습되기 때문에 segment embedding역시 
+-  UNILM은 여러가지 LM task들을 사용하여 학습되기 때문에 segment embedding이 어떤 LM 인지 구분하는 식별자 역할을 함 (각 LM마다 다른 segment embedding을 사용하기 때문)   
 
 **2. Backbone Network: Transformer**  
+- input 벡터 ![](https://lh3.googleusercontent.com/8NsGvrXPp8zylZiMIkZA_EwMyaar4J5pcOj1Ak01UyRp8-YA09Klh09jGosujKTpJR6br8mcjJSZ "001") 를 먼저 ![](https://lh3.googleusercontent.com/Nsd8dzf6Yl39jU691nvGt6HkGacK8BsyH6ZHnX_ADSWTOHaVUN6AljhUgzXTSW9eaLXJ2uuzPHvR "002") 로 압축하고 서로 다른 level의 abstract에서![](https://lh3.googleusercontent.com/AWKkW01Zj62nPlhVU8SWN6MiBRGwyhFnAybYizsCp0tCjkdgRPEI2F2Dd_0Wm-kTMPqWNjq0GnsX "c2")     contextual representation으로 인코딩 하는데 이때 L-layer Transformer 사용![](https://lh3.googleusercontent.com/VQU9KaI607AFpN0WtBYd6qGVU7AVQjr3cLmcHdpZVbIcnTvy3jSJEFpzKctZapNYTKYeQbiL3FDz "c3")   
+-  각 Transformer block안에는 여러개의 self-attention head가 존재하고, 그 head들이 이전 layer의 output 벡터를 aggregate함(어떻게? 코드확인)  
+- l번째 Transformer layer에서 self-attention head ![](https://lh3.googleusercontent.com/1l8TUw-JR-bAXOx6RGyvs1sfy4zgYYs8LnWWT9YCifM9ZOkV422o_VrDrpZ80rL9LlNUw7M_KVQe "c4") 의 출력은 아래 식을 통해 계산됨  
 
+(띠용 읽는 도중에 논문 업데이트 됨 아래는 원래 수식)  
+![](https://lh3.googleusercontent.com/MZA4z7Il0nf6lm3xcxWVbrQMjfC5qAGeWF9QyHTekFxtXYLyd3tLoSmIVskIf0xT5PW9gZttSTUs "0")   
 ![](https://lh3.googleusercontent.com/LbQyXgk9NoDbpPLzOhIUUTIrDU8kXsod-SSpLkPjNBMUxmrZHvbTP1nY4SDF2ZLAxAhs7jnxASL- "01")  
 
+(이게 조금 수정된 수식 거의 똑같음)  
+![](https://lh3.googleusercontent.com/-Xd_UlHkaeLKDqxI7TQxbcxnYvh7YD0cqRu7-qJ6AMWqkEQN7FNj4EVh_VoSz1H06yxPEwrnyovL "c1")  
+- 이전 layer의 output인 ![](https://lh3.googleusercontent.com/CpKvvOjCzX4YXCrv1E7WBhqZesdsRf6Ntvg_hX5S1g0joTKTZ7xWeKVg171T4OUQFsvI9LNmnToH "c4") 는 각각 매개 변수 행렬 ![](https://lh3.googleusercontent.com/T-kml37_wXpVaGET4XH2kUiYxzFWFA7IhjkVOuQGdxBgYQMYs9rLs5tOQ_qHORP5HnV98hGpY5vW "c5")  
+를 이용해 query, key, value들이 3배로 linearly project되며 mask 행렬 ![](https://lh3.googleusercontent.com/n2SlmCHDid6lQ6UXsDzS2m-9fHYdrJh1bL0eyVgA1c086wxstVTH1ZvjJGEN8Ez8z_Qo3MXEO7et "c6") 은 한쌍의 token들이 서로 attended 할 수 있는지여부를 결정  
+![](https://lh3.googleusercontent.com/9OxCWCThMcBncK1ZBjPxKABJqZudPUkNIZg3aFbKJqDIFFCj03htqjXcAmDLZ0bkxxa4MP4typVt "3")    
+- 위 그림 처럼 contextualized representation을 계산할 때 token이 어떤 context에 영향을 줄지를 조절하기 위해 mask 행렬인 M 사용  
+- bidirectional LM을 예로 들면, mask 행렬의 요소는 모두 0이며 모든 token이 서로 access할 수 있음을 나타냄  
+
 **3. Pre-training Objectives**  
+- 서로 다른 language modeling을 위해 설계된 네가지  cloze task를 사용해 UNILM을 pretain    
+- cloze task에서 임의의 일부 WordPiece token을 선택해 special token [MASK]로 바꿈  
+- 그다음, Transformer network에서 계산된 output 벡터를 softmax classifier을 이용해 masked token을 predict함  
+- UNILM의 parameter들은 predicted token들과 original token들을 이용해 cross-entropy loss를 최소화하는 방향으로 학습 함  
+- cloze task를 사용하면 모든 LM에 대해 undirectional, bidirectional 모두 같은 training procedure를 사용할 수 있음(?)(It is worth noting that the use of cloze tasks makes it possible to use the same training procedure for all LMs, unidirectional and bidirectional alike.)    
+##### Unidirectional LM  
+##### Bidirectional LM  
+##### Sequence-to-Sequence LM  
+##### Next Sentence Prediction   
+- bidirectional LM같은 경우 BERT와 같이 pre-training을 위한 다음 문장 예측작업도 포함함  
 
 **4. Pre-training Setup**  
 
-**5. Fine-tuning on Downstream Tasks**  
+**5. Fine-tuning on Downstream NLU and NLG Tasks**  
 
 ### Experiments  
+- NLU, NLG task에 대해 실험 진행  
+- NLU : GLUE benchmark, extractive question answering   
+- NLG : abstractive summarization, question generation, generative question answering, dialog response generation  
 
 **1. Abstractive Summarization**
-![enter image description here](https://lh3.googleusercontent.com/VH5BF1kRAOwAWC-4nN1wB-kbg1iznrVb8G694eJi6hngO8BFI_E3IAHW3ma_aZQmE2ptD08Zublk "14")  
+![](https://lh3.googleusercontent.com/52WTVHoVESHBM_OVrx5vROywWLAuq7GTS_z3_pB4nKGy8x9fxcVNkKDoMWZGFVMByKCrxlgB3Svp "t1")  
+  
+**2. Question Answering**    
+![](https://lh3.googleusercontent.com/j3LDjp7dEDDzVubmuKgjM5O74ciX6gSG5hIr8sOB5Tezinl3lsn8l8w6UlwFfJLoHCAjJMVtbZ5V "t2")  
 
-**2. Question Answering**  
-![enter image description here](https://lh3.googleusercontent.com/1DVwRt7VM94FPElQNbyEdGjbJysuGyzLIDrLgLi2kDdDSU47x-QkybfJI2-DU96jjx599g4mjAsu "15")  
+**3. Question  Generation**      
+![](https://lh3.googleusercontent.com/Q-xtZvpx9wIoxAYUKSSUHMLpudlnUx4h378_pmIxN2Wcnm-71HYfDio1lmGT2WBaNFWxiu-N_h0N "t3")   
 
-![](https://lh3.googleusercontent.com/atsTyOGHLcLmZJfk3vbKGl4_2C6eYWf-F06WNTW1xwgBvmhD1ER_n_mnAB6G598PGYYIz5hUsmT2 "16")  
+**4. Response Generation**  
+![](https://lh3.googleusercontent.com/8tczXWonXY1AENcDOVArs-4sfnFB3JHnbIntLrJRzYlT2571AZs82DeF5pXveYIDQeto7zl1FQ2g "t4")    
 
-![](https://lh3.googleusercontent.com/64mT5qigUZZqa56_3OG8dFolpTbTyq92ZCYo2Inr11HPGz3nlAq0lC9LDc_DgVJfmLslGyNiUXAy "17")  
-
-**3. Question  Generation**  
-![enter image description here](https://lh3.googleusercontent.com/4Xcju7mdOvJWKG76dSbVxo47-XQ97YtSNimHct_-gkArCasq9LsGuKoHIAmOjqBAFtDv1i16iOti "18")  
-
-![](https://lh3.googleusercontent.com/evyUIAAvW3_BNdnwYI-tA8I4bO-AiZXHyYCB6-9LgQOlMpdGG9jZPB0AdcPi1mELFbLqhfShK-AM "19")    
-
-**4. GLUE Benchmark**  
-![](https://lh3.googleusercontent.com/oZMiEeikhKEEqM2XSIazCl4PdbMksXSxMZHkb9fz8_S0QNZNPQn3475dorpb6xoOLHzXsMuDZrT_ "20")    
-
-**5. Long Text Generation : A Case Study**  
+**5. GLUE Benchmark**  
+![](https://lh3.googleusercontent.com/mKGOy05vx7gJJ8S1aQQQpf6VSe3El3K6TcuiscPuTIwc6q0lWktefcSPq7REWujM_EAKXbQ6Q9Zt "t5")    
 
 ### Conclusion and Future Work  
 **Conclusion**  
@@ -112,6 +134,6 @@ Source code : [github](https://github.com/microsoft/unilm)
 위 표는 UNILM left-to-right generation을 이용해 Text 생성한 예시  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NzYxNjEwOCwtNDU5NTgzNTMsLTg4OT
-g3MjUyNV19
+eyJoaXN0b3J5IjpbLTc5NDEzNTEwNywxMzU3NjE2MTA4LC00NT
+k1ODM1MywtODg5ODcyNTI1XX0=
 -->
