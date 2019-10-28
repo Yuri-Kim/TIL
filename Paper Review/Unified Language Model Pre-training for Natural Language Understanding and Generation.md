@@ -1,4 +1,3 @@
-
 ## Unified Language Model Pre-training for Natural Language Understanding and Generation  
 
 Li Dong, Nan Yang, Wenhui Wang, Furu Wei et al. (Microsoft Research) [Paper](https://arxiv.org/abs/1905.03197)  
@@ -87,12 +86,22 @@ Source code : [github](https://github.com/microsoft/unilm)
 - UNILM의 parameter들은 predicted token들과 original token들을 이용해 cross-entropy loss를 최소화하는 방향으로 학습 함  
 - cloze task를 사용하면 모든 LM에 대해 undirectional, bidirectional 모두 같은 training procedure를 사용할 수 있음(?)(It is worth noting that the use of cloze tasks makes it possible to use the same training procedure for all LMs, unidirectional and bidirectional alike.)    
 ##### Unidirectional LM  
+- left-to-right LM, right-to- left LM object 모두 사용  
+- 예를 들어 left-to-right LM에서는, 각 toekn의 representation을 해당 token의 왼쪽 context token과 해당 token만 인코딩함  
+- 예를 들어,  "x1x2[MASK]x4"에서 마스킹된 토큰을 예측할 때 x1, x2, [MASK]만 사용  
+-  위의 식 (2)처럼, self-attention mask M을 삼각행렬로 사용하여 가능하게 함 (삼각행렬에서 self-attention mask의 위쪽인 부분은 -∞, 다른 부분은 0으로 채움 - 예시: 위의 모델 그림)  
+- 마찬가지로 reight-to-left LM은 token을 오른쪽 future context에 따라 예측 함   
 ##### Bidirectional LM  
+- bidirectional LM은 BERT처럼 모든 token이 서로 예측에 이용 될 수 있음  
+- contextual information을 양방향에서 인코드하고, 그렇기 때문에 단방향 일때 보다 text context를 더 잘 표현함  
+- 위의 식 (2)처럼, self-attention mask M 은 0행렬을 가지므로, 모든 token이 input sequence의 모든 position에서 사용될 수 있음  
 ##### Sequence-to-Sequence LM  
+- 
 ##### Next Sentence Prediction   
 - bidirectional LM같은 경우 BERT와 같이 pre-training을 위한 다음 문장 예측작업도 포함함  
 
 **4. Pre-training Setup**  
+
 
 **5. Fine-tuning on Downstream NLU and NLG Tasks**  
 
@@ -132,8 +141,7 @@ Source code : [github](https://github.com/microsoft/unilm)
  
 ![enter image description here](https://lh3.googleusercontent.com/QqYOlVcPHO-NB2O3LVAIfsptzfbl5zq1bKmJWWotdxElh8ZjdM_5r--Zh3qJx58HGCS809XG1B3g "21")
 위 표는 UNILM left-to-right generation을 이용해 Text 생성한 예시  
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NDEzNTEwNywxMzU3NjE2MTA4LC00NT
-k1ODM1MywtODg5ODcyNTI1XX0=
+eyJoaXN0b3J5IjpbLTU1OTM1NDgxLC03OTQxMzUxMDcsMTM1Nz
+YxNjEwOCwtNDU5NTgzNTMsLTg4OTg3MjUyNV19
 -->
