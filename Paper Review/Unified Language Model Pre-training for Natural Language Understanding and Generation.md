@@ -1,3 +1,4 @@
+
 ## Unified Language Model Pre-training for Natural Language Understanding and Generation  
 
 Li Dong, Nan Yang, Wenhui Wang, Furu Wei et al. (Microsoft Research) [Paper](https://arxiv.org/abs/1905.03197)  
@@ -20,7 +21,7 @@ Source code : [github](https://github.com/microsoft/unilm)
 - 거대한 양의 text data를 pre-training 한 후 downstream task에 맞게 모델을 fine-tuning할 수 있음  
 - 아래 표와 같이 다양한 유형의 LM을 pre-train하기 위해 다양한 prediction task와 training objective들이 사용되고 있음  
 ![enter image description here](https://lh3.googleusercontent.com/_ZiA8SqkJWfBvo0VI50jesr0XYb8hD8EU1eCF54rM98zfEZXrQY76ihlSnaE_sgrz3JSD2nJjkh1 "1")  
-	-	**ELMO** (Peters et al,, 2018)는 long short-term memory networks를 기반으로 한 두개의 unidirectional LM을 학습 (forward LM : text를 왼쪽 으로 읽고, backward LM : text를 오른쪽 으로 인코딩)    
+	-	**ELMO** (Peters et al,, 2018)는 long short-term memory networks기반의 두개의 unidirectional LM을 학습 (forward LM : text를 왼쪽 으로 읽고, backward LM : text를 오른쪽 으로 인코딩)    
 	-	**GPT** (Radford et al., 2018)는 left-to-right Transformer를 이용해 text sequence를 word단위로 predict  
 	-	**BERT** (Devlin et al., 2018)는 bidirectional Transformer encoder를 사용해 masked word들을 predict하기 위해 오른쪽과 왼쪽 context를 fuse(융합?)  
 	-	또한 **BERT**는 한 쌍의 텍스트의 관계를 명시적으로 모델링 할 수 있어 자연어 추론(Natural Language Inference)같은 pair-wise NLU task에 유리함 but, 광범위한 NLP task에서 성능을 향상시켰지만, bidirectionality때문에 NLG(generation task)에 적용하기는 어려움  
@@ -96,12 +97,23 @@ Source code : [github](https://github.com/microsoft/unilm)
 - contextual information을 양방향에서 인코드하고, 그렇기 때문에 단방향 일때 보다 text context를 더 잘 표현함  
 - 위의 식 (2)처럼, self-attention mask M 은 0행렬을 가지므로, 모든 token이 input sequence의 모든 position에서 사용될 수 있음  
 ##### Sequence-to-Sequence LM  
-- 
+- 위 그림에서 볼 수 있듯, prediction할 때, 첫번째 (source) segment의 token은 segment 내에서 양방향으로 attend하지만, 두번째 (target) segment은 오직 target내의 leftward context과 자기자신에만 attend할 수 있음  
+- 예를 들어, source segment "t1t2", target segment "t3t4t5"가 있을 때, 모델에 넣는 input은 "[SOS] t1 t2 [EOS] t3 t4 t5 [EOS]" → t1 t2 는 [SOS], [EOS]를 포함한 처음 4개의 token에 access하지만, t4는 오직 첫번째 6개 token만 access가능  
+- 그림에서 처럼, self-attention mask M을 seq2seq LM을 사용함  
+- M의 왼쪽 부분을 0으로 채워놨기 때문에 모든 token들이 첫번째 segment에 영향 줄 수 있음  
+- M의 오른쪽 윗부분은 -∞로 채워짐 그래서 source segment가 target segment에 attention되는 것을 막음  
+- M의 오른쪽 아랫부분은 -∞로 채우고 다른 부분을 0으로 채워서 target segment 내의 이전 token들이 그들의 오른쪽 position(나중에 나올)에 영향을 줄 수 없게 함  
+-  학습을 진행하는 동안 두가지 segment들에서 임의로 token을 선택하여 마스킹함 ([MASK])  
+- 그러면 이 모델이 masked token을 복구하는 방법을 학습  
+- source text, target text 쌍은 학습 과정에서 연속된 하나의 input text sequence로 압축됨 이는 두 segment간의 관계를 학습하는것을 암시적으로 권장함  
+- target segment는 token을 더 잘 예측하기 위해 source segment를 효과적으로 인코딩하는 방법을 학습함  
+- 따라서, encoder-decoder 모델로 알려진 seq2seq LM을 위해 설계된 cloze task는 unidirectional decoder와 bidirectional encoder를 동시에 pre-train 시킴  
+- encoder-decoder 모델로 사용되는 pre-trained 모델은 넓은 범위의 text generation task에 사용될 수 있음 (abstractive summarization)  
 ##### Next Sentence Prediction   
-- bidirectional LM같은 경우 BERT와 같이 pre-training을 위한 다음 문장 예측작업도 포함함  
+- bidirectional LM같은 경우 BERT처럼 pre-training을 위한 다음 문장 예측작업도 포함함  
 
 **4. Pre-training Setup**  
-
+- 
 
 **5. Fine-tuning on Downstream NLU and NLG Tasks**  
 
@@ -141,7 +153,9 @@ Source code : [github](https://github.com/microsoft/unilm)
  
 ![enter image description here](https://lh3.googleusercontent.com/QqYOlVcPHO-NB2O3LVAIfsptzfbl5zq1bKmJWWotdxElh8ZjdM_5r--Zh3qJx58HGCS809XG1B3g "21")
 위 표는 UNILM left-to-right generation을 이용해 Text 생성한 예시  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTM1NDgxLC03OTQxMzUxMDcsMTM1Nz
-YxNjEwOCwtNDU5NTgzNTMsLTg4OTg3MjUyNV19
+eyJoaXN0b3J5IjpbMTk0MjcxMTM1NCwtNTU5MzU0ODEsLTc5ND
+EzNTEwNywxMzU3NjE2MTA4LC00NTk1ODM1MywtODg5ODcyNTI1
+XX0=
 -->
