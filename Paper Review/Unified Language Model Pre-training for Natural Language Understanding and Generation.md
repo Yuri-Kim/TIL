@@ -113,7 +113,10 @@ Source code : [github](https://github.com/microsoft/unilm)
 - bidirectional LM같은 경우 BERT처럼 pre-training을 위한 다음 문장 예측작업도 포함함  
 
 **4. Pre-training Setup**  
-- 
+- 1개의 training batch를 학습 시킬 때, 시간 기준으로 1/3은 bidirectional LM, 1/3은  Sseq2seq LM, 1/6은 left to right unidirectional LM, 1/6 right to left unidirectional LM을 사용함  
+- Model 아키텍처는 BERTlarge  사용  
+- gelu activation (like GPT)  
+- 24 layer transformer, 1024 hidden size, 16 self-attention head (340M parameter)  
 
 **5. Fine-tuning on Downstream NLU and NLG Tasks**  
 
@@ -154,8 +157,11 @@ Source code : [github](https://github.com/microsoft/unilm)
 ![enter image description here](https://lh3.googleusercontent.com/QqYOlVcPHO-NB2O3LVAIfsptzfbl5zq1bKmJWWotdxElh8ZjdM_5r--Zh3qJx58HGCS809XG1B3g "21")
 위 표는 UNILM left-to-right generation을 이용해 Text 생성한 예시  
 
+----
+
+### APPENDIX  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MjcxMTM1NCwtNTU5MzU0ODEsLTc5ND
-EzNTEwNywxMzU3NjE2MTA4LC00NTk1ODM1MywtODg5ODcyNTI1
-XX0=
+eyJoaXN0b3J5IjpbMjc4NzY1ODkyLDE5NDI3MTEzNTQsLTU1OT
+M1NDgxLC03OTQxMzUxMDcsMTM1NzYxNjEwOCwtNDU5NTgzNTMs
+LTg4OTg3MjUyNV19
 -->
