@@ -23,7 +23,7 @@
 
 ### CUDA 설치  
 [여기서](https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork) CUDA 10.0 다운로드 및 설치  
-
+![enter image description here](https://lh3.googleusercontent.com/Qahox58kI75WEN5MbtmTalsL1XHrfhW_DqDfS4BdZ3HtW-ncr6RhDY98dmOWYaa2Vgrc5OtyYg72 "1")  
 (설치할 때 화면이 깜빡일 수 있음)  
 
 환경 변수 설정  
@@ -60,5 +60,5 @@ tensorflow-gpu (1.13.1) 설치
 ](https://lh3.googleusercontent.com/h6hNMlLXiu1diuILVFykk5kP4coOvpDXnRKRqvwus_0ATyIbCjelE35n0-6hSZtW4vNeUf0rB6EC "gpu")  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTk1MjIwMl19
+eyJoaXN0b3J5IjpbLTg5MjY3OTU5M119
 -->
