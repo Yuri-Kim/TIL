@@ -34,3 +34,6 @@ tag달린 docker image를 docker cloud에 push
 
 `$ export DOCKER_ID_USER="name"`
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTY5NTE3NzU4Nl19
+-->
